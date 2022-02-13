@@ -13,6 +13,8 @@ Para rodar a aplicação em dev basta rodar o comando a seguir no terminal:
 Para rodar os testes execute o comando a seguir no terminal:
 * `yarn cypress`
 * O Cypress oferece uma interface gráfica para execução dos testes
+* OBS: A aplicação deve estar rodando para que os testes sejam executados
+* Caso os testes não consigam ser executados exclua a pasta .next e execute a aplicação novamente
 
 ## Layout
 Projetei a interface da aplicação utilizando Figma, baseado em algumas inpressões do diste starwars.com, segue o link:
@@ -42,3 +44,12 @@ Projetei a interface da aplicação utilizando Figma, baseado em algumas inpress
 * Header -> Topo da página mostrado em todas as páginas do site
 * Films -> Listagem de films que pode ser visto na página inicial e na página de detalhes de um personagem
 * People -> Listagem de personagens que pode ser visto na listagem de personagens e na página de detalhes de um filme
+
+# Pages
+* index -> Pagina de listagem de filmes
+* films/[id] -> Pagina de detalhamento do filme
+* people/index -> Pagina de listagem de personagens
+* people/[id] -> Pagina de detalhamento do personagem
+
+# Services
+* swapi -> Serviço de integração com a api do SWAPI
