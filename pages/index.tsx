@@ -28,7 +28,6 @@ export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
   const films = await findAllFilms();
-  console.log(films);
   return {
     props: {
       films,

@@ -21,7 +21,7 @@ export function Header() {
         <h1 className="mobileLogo">
           <Image src="/mobile-logo.png" alt="Star Wars Logo" height="20" width="200" />
         </h1>
-        <nav className={navOpen ? "opened" : "closed"}>
+        <nav className={navOpen ? "opened" : "closed"} data-test-id="mobile-nav">
           <ul>
             <li>
               <ActiveLink activeClassName="active" href="/">
@@ -35,7 +35,7 @@ export function Header() {
             </li>
           </ul>
         </nav>
-        <OpenCloseNavBtn onClick={handlerOpenCloseNav}>{navOpen ? <FaTimes/>: <HiMenu/>}</OpenCloseNavBtn> 
+        <OpenCloseNavBtn data-test-id="toggle-nav-btn" onClick={handlerOpenCloseNav}>{navOpen ? <FaTimes/>: <HiMenu/>}</OpenCloseNavBtn> 
       </header>
     </Container>
   );

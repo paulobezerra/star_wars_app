@@ -19,7 +19,7 @@ export function Films({ films }: FilmsProps) {
       {films?.map((film) => (
         <div className="film" key={film.title}>
           <Link href={`/films/${film.id}`}>
-            <a>
+            <a data-test-id={`film-link-${film.id}`}>
               <Image
                 src={film.image}
                 alt={film.title}

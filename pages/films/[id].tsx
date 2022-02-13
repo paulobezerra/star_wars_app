@@ -91,7 +91,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const film = await getFilm(id);
   const result = await findAllPeople(1);
   const people = result?.people?.filter(person => film.characters.includes(person.id))
-  console.log(result.next);
   return {
     props: {
       film,

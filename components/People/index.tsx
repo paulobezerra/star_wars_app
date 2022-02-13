@@ -19,7 +19,7 @@ export function People({ people }: PeopleProps) {
       {people?.map((person) => (
         <div className="person" key={person.name}>
           <Link href={`/people/${person.id}`}>
-            <a title={person.name}>
+            <a ref={person.name} data-test-id={`person-link-${person.id}`}>
               <Image
                 src={person.image}
                 alt={person.name}

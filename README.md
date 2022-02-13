@@ -9,12 +9,16 @@ Para esta aplicação utilizei o yarn para controlar as dependências, compilar 
 Para rodar a aplicação em dev basta rodar o comando a seguir no terminal:
 * `yarn dev`
 
+## Rodando testes
+Para rodar os testes execute o comando a seguir no terminal:
+* `yarn cypress`
+* O Cypress oferece uma interface gráfica para execução dos testes
+
 ## Layout
 Projetei a interface da aplicação utilizando Figma, baseado em algumas inpressões do diste starwars.com, segue o link:
 * [https://www.figma.com/file/IQR79CmuprXP9moKeDQB1s/Star-Wars-App](https://www.figma.com/file/IQR79CmuprXP9moKeDQB1s/Star-Wars-App)
 
 ## Tecnologias
-
 * **React**: O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
 * **NextJS**: Next.js é framework de desenvolvimento front-end de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.
 * **TypeScript**: TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.
@@ -25,6 +29,7 @@ Projetei a interface da aplicação utilizando Figma, baseado em algumas inpress
 * **Yarn**: Sistema de empacotamento de software desenvolvido em 2016 pelo Facebook. Fornece velocidade, consistência, estabilidade e segurança como uma alternativa ao npm
 * **DotEnv**: Módulo para carregamento de variaveis de ambinete da aplicação
 * **MomentJS**: Biblioteca de para formatação de data e hora
+* **Cypress**: Biblioteca de teste utilizada nos testes de integração
 
 # Rotas das páginas
 * / -> Página inicial com a listagem dos filmes

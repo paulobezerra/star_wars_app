@@ -31,7 +31,7 @@ const PeoplePage = ({ people, nextPage }: PeopleProps) => {
 
       <h2>Characteres</h2>
       <People people={allPeople}/>
-      {page && <LoadMore onClick={handleLoadMore}>Load more</LoadMore> }
+      {page && <LoadMore onClick={handleLoadMore} data-test-id="load-more-people">Load more</LoadMore> }
     </Container>
   )
 }
