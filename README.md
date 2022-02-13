@@ -25,3 +25,15 @@ Projetei a interface da aplicação utilizando Figma, baseado em algumas inpress
 * **Yarn**: Sistema de empacotamento de software desenvolvido em 2016 pelo Facebook. Fornece velocidade, consistência, estabilidade e segurança como uma alternativa ao npm
 * **DotEnv**: Módulo para carregamento de variaveis de ambinete da aplicação
 * **MomentJS**: Biblioteca de para formatação de data e hora
+
+# Rotas das páginas
+* / -> Página inicial com a listagem dos filmes
+* /films/:id -> Detalhe de um film
+* /people -> Listagem de personagens
+* /people/:id -> Detalhe de um personagem
+
+# Components
+* ActiveLink -> Facilita na construção de menus setando className para destacar o link ativo
+* Header -> Topo da página mostrado em todas as páginas do site
+* Films -> Listagem de films que pode ser visto na página inicial e na página de detalhes de um personagem
+* People -> Listagem de personagens que pode ser visto na listagem de personagens e na página de detalhes de um filme

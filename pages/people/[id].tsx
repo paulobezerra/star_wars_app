@@ -2,19 +2,20 @@ import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Films } from "../../components/Films";
-import { findAllFilms, findAllPeople, getFilm } from "../../services/swapi";
-import { Container } from "./style";
+import { findAllFilms, getPerson } from "../../services/swapi";
+import { Container } from "./style_person";
 
 interface PersonProps {
   person: {
     name: string;
     image: string;
-    characters: string[];
-    opening_crawl: string;
-    episode_id: string;
-    director: string;
-    producer: string;
-    release_date: string;
+    height: string;
+    mass: string;
+    hair_color: string;
+    skin_color: string;
+    eye_color: string;
+    birth_year: string;
+    gender: string;
   };
   films: any[];
   nextPage: number;
@@ -34,25 +35,40 @@ const People = ({ person, films }: PersonProps) => {
 
       <h2>{person.name}</h2>
       <div className="person" key={person.name}>
-        <Image src={person.image} alt={person.name} width="300" height="467" />
+        <Image
+          src={person.image}
+          alt={person.name}
+          width="400"
+          height="400"
+          objectFit="cover"
+        />
         <ul className="info">
           <li>
-            Episode:<strong>{person.episode_id}</strong>
+            Height:<strong>{person.height}</strong>
           </li>
           <li>
-            Director:<strong>{person.director}</strong>
+            Mass:<strong>{person.mass}</strong>
           </li>
           <li>
-            Producer:<strong>{person.producer}</strong>
+            Hair color:<strong>{person.hair_color}</strong>
           </li>
           <li>
-            Release:<strong>{person.release_date}</strong>
+            Skin color:<strong>{person.skin_color}</strong>
+          </li>
+          <li>
+            Eye Color:<strong>{person.eye_color}</strong>
+          </li>
+          <li>
+            Birth Year:<strong>{person.birth_year}</strong>
+          </li>
+          <li>
+            Gender:<strong>{person.gender}</strong>
           </li>
         </ul>
       </div>
 
       <h3>Movies</h3>
-      <Films films={films}/>
+      <Films films={films} />
     </Container>
   );
 };
@@ -74,8 +90,9 @@ export const getStaticPaths = () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { id } = params;
-  const person = await getFilm(id);
-  const films = await findAllFilms();
+  const person = await getPerson(id);
+  let films = await findAllFilms();
+  films = films.filter((film) => person.films.includes(film.id));
   return {
     props: {
       person,

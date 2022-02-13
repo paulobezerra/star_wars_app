@@ -63,7 +63,6 @@ export const findAllPeople = async (page: number): Promise<any> => {
         image:image,
       }; 
     });
-    console.log(result?.data, people)
     return {
       people: people,
       nextPage: result?.data?.next ? page + 1 : null
@@ -71,5 +70,21 @@ export const findAllPeople = async (page: number): Promise<any> => {
   } catch (err) {
     console.error(err);
     return [];
+  }
+};
+
+export const getPerson = async (id: string): Promise<any> => {
+  try {
+    const result = await swapi.get(`people/${id}`);
+    const person = result?.data
+    const image = getPersonImage(parseInt(id), person.name);
+    return {
+      ...person,
+      image: image,
+      films: person.films.map((url: string) => getId(url, "films")),
+    };
+  } catch (err) {
+    console.error(err);
+    return null;
   }
 };

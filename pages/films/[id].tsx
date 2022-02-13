@@ -25,10 +25,10 @@ const Film = ({ film, people, nextPage }: FilmProps) => {
   const [allPeople, setPeople] = useState(people)
   const [page, setPage] = useState(nextPage)
 
-
   const handleLoadMore = async () => {
     const result = await findAllPeople(page);
-    setPeople([...allPeople, ...result.people]);
+    const people = result?.people?.filter(person => film.characters.includes(person.id))
+    setPeople([...allPeople, ...people]);
     setPage(result.nextPage);
   }
 
@@ -91,11 +91,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const film = await getFilm(id);
   const result = await findAllPeople(1);
   const people = result?.people?.filter(person => film.characters.includes(person.id))
+  console.log(result.next);
   return {
     props: {
       film,
       people,
-      nextPage: result.next
+      nextPage: result.nextPage
     },
     revalidate: 60 * 60 * 24, // 24 horas
   };

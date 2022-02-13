@@ -25,12 +25,12 @@ export function Header() {
           <ul>
             <li>
               <ActiveLink activeClassName="active" href="/">
-                <a>Movies</a>
+                <a data-test-id="link-to-movies" onClick={() => setNavOpen(false)}>Movies</a>
               </ActiveLink>
             </li>
             <li>
               <ActiveLink activeClassName="active" href="/people">
-                <a>Characters</a>
+                <a data-test-id="link-to-characteres" onClick={() => setNavOpen(false)}>Characters</a>
               </ActiveLink>
             </li>
           </ul>

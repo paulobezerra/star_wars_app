@@ -1,7 +1,5 @@
 import type { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useState } from 'react'
 import { People } from '../../components/People'
 import { findAllPeople } from '../../services/swapi'

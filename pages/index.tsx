@@ -1,8 +1,5 @@
 import type { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
 import { Films } from '../components/Films'
 import { findAllFilms } from '../services/swapi'
 import { Container } from './style'
