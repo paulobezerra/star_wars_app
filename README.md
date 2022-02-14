@@ -33,23 +33,23 @@ Projetei a interface da aplicação utilizando Figma, baseado em algumas inpress
 * **MomentJS**: Biblioteca de para formatação de data e hora
 * **Cypress**: Biblioteca de teste utilizada nos testes de integração
 
-# Rotas das páginas
+## Rotas das páginas
 * / -> Página inicial com a listagem dos filmes
 * /films/:id -> Detalhe de um film
 * /people -> Listagem de personagens
 * /people/:id -> Detalhe de um personagem
 
-# Components
+## Components
 * ActiveLink -> Facilita na construção de menus setando className para destacar o link ativo
 * Header -> Topo da página mostrado em todas as páginas do site
 * Films -> Listagem de films que pode ser visto na página inicial e na página de detalhes de um personagem
 * People -> Listagem de personagens que pode ser visto na listagem de personagens e na página de detalhes de um filme
 
-# Pages
+## Pages
 * index -> Pagina de listagem de filmes
 * films/[id] -> Pagina de detalhamento do filme
 * people/index -> Pagina de listagem de personagens
 * people/[id] -> Pagina de detalhamento do personagem
 
-# Services
+## Services
 * swapi -> Serviço de integração com a api do SWAPI

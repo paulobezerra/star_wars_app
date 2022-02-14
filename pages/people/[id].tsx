@@ -21,7 +21,7 @@ interface PersonProps {
   nextPage: number;
 }
 
-const People = ({ person, films }: PersonProps) => {
+const Person = ({ person, films }: PersonProps) => {
   return (
     <Container>
       <Head>
@@ -73,7 +73,7 @@ const People = ({ person, films }: PersonProps) => {
   );
 };
 
-export default People;
+export default Person;
 
 export const getStaticPaths = () => {
   return {
